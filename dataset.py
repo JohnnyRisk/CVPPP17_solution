@@ -91,7 +91,9 @@ class Iterator(object):
                  zoom_range=0.05,
                  fill_mode='nearest',
                  alpha=0,
-                 sigma=0):
+                 sigma=0,
+                 horizontal_flip=0,
+                 vertical_flip=0):
         self.images = images
         self.masks = masks
         self.batch_size = batch_size
@@ -103,6 +105,8 @@ class Iterator(object):
             'shear_range': shear_range,
             'zoom_range': zoom_range,
             'fill_mode': fill_mode,
+            'horizontal_flip': horizontal_flip,
+            'vertical_flip': vertical_flip
         }
         self.idg = ImageDataGenerator(**augment_options)
         self.alpha = alpha

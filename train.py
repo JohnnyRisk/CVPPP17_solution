@@ -62,14 +62,15 @@ def train():
         'shear_range': parameters["shear_range"],
         'zoom_range': parameters["zoom_range"],
         'fill_mode': parameters["fill_mode"],
-        'horizontal_flip': parameters["horizontal_flip"],
-        'vertical_flip': parameters["vertical_flip"],
         'alpha': parameters["alpha"],
         'sigma': parameters["sigma"],
+        'horizontal_flip': parameters["horizontal_flip"],
+        'vertical_flip': parameters["vertical_flip"],
     }
     train_generator, train_steps_per_epoch, \
     val_generator, val_steps_per_epoch = dataset.create_generators(
-        data_dir=os.getcwd(), batch_size=parameters["batch_size"],
+        data_dir=os.getcwd(), sub_dir=parameters["sub_dir"],
+        batch_size=parameters["batch_size"],
         validation_split=parameters["validation_split"],
         shuffle_train_val=parameters["shuffle_train_val"],
         shuffle=parameters["shuffle"],

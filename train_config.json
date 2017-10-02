@@ -1,6 +1,6 @@
 {"data_path":"/home/johnny/data_insights/heallo/data",
 "sub_data":"/poc_data",
-"data_split":"test",
+"sub_dir":"train",
 "model_path":"/home/johnny/data_insights/model_repo",
 "model_name":"unet_6_disease_mask",
 "loss_func":"binary_crossentropy",
